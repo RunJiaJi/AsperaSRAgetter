@@ -1,5 +1,4 @@
 # AsperaSRAgetter
----
 AsperaSRAgetter provides a easy way to download sequencing data (fastq.gz format) from European Nucleotide Archive (ENA) by using Aspera.
 
 ## Installation
