@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 setup(
     name='AsperaSRAgetter',
-    version='1.0',
+    version='2.1',
     description="The AsperaSRAgetter provides a easy way to download sequencing data from ENA by using Aspera.",
     url="https://github.com/RunJiaJi/AsperaSRAgetter",
     author='Runjia Ji',

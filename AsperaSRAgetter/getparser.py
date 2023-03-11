@@ -24,8 +24,8 @@ Runjia Ji, 2023
 """
     )
 
-    parser.add_argument('-v', '--version', action='version', version='%(prog)s 1.0', help='Show SRAdownloader version number and exit')
-    group = parser.add_mutually_exclusive_group()
+    parser.add_argument('-v', '--version', action='version', version='%(prog)s 2.1', help='Show SRAdownloader version number and exit')
+    group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument('-acc', '--accession', type=str, help='SRA data accession')
     group.add_argument('-f', '--file', type=str, help='TXT file with multiple SRA accessions')
     parser.add_argument('-ssh', '--ssh-key', dest='ssh_key', type=str, help="Public key authentication file provided by Aspera command line client download package as the 'asperaweb_id_dsa.openssh' file", required=True)
