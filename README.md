@@ -1,5 +1,6 @@
 # AsperaSRAgetter
 [![PyPI version](https://badge.fury.io/py/asperaSRAgetter.svg)](https://badge.fury.io/py/asperaSRAgetter)
+
 AsperaSRAgetter provides an easy way to download sequencing data (fastq.gz format) from European Nucleotide Archive (ENA) by using Aspera.
 
 ## Installation
