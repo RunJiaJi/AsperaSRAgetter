@@ -1,9 +1,10 @@
 # AsperaSRAgetter
-AsperaSRAgetter provides a easy way to download sequencing data (fastq.gz format) from European Nucleotide Archive (ENA) by using Aspera.
+AsperaSRAgetter provides an easy way to download sequencing data (fastq.gz format) from European Nucleotide Archive (ENA) by using Aspera.
 
 ## Installation
-AsperaSRAgetter has been distributed on [pypi](https://pypi.org/project/AsperaSRAgetter/). You can easily install AsperaSRAgetter through pip. AsperaSRAgetter depends on Aspera-CLI to retrive sequencing data from ENA. [Conda](https://anaconda.org/hcc/aspera-cli) is recommended to install Aspera-CLI.
-```bash
+AsperaSRAgetter has been distributed on [pypi](https://pypi.org/project/AsperaSRAgetter/). You can easily install AsperaSRAgetter through pip. AsperaSRAgetter depends on Aspera-CLI to retrive sequencing data from ENA. It is recommended to install Aspera-CLI [with Conda](https://anaconda.org/hcc/aspera-cli).
+
+```shell
 # You may create a new invironment for AsperaSRAgetter, but this is optional
 conda create -n AsperaSRAgetter python=3.10
 conda activate AsperaSRAgetter
@@ -14,6 +15,15 @@ pip install AsperaSRAgetter
 # Install Aspera-CLI using conda
 conda install -c hcc aspera-cli
 ```
+
+## Workflow
+
+AsperaSRAgetter first inquiry for corresponding fastq.gz file report through [ENA filereport API](https://www.ebi.ac.uk/ena/portal/api/). Sencondly, the MD5 hash value and ftp url of each fastq.gz files are then resolved from the report. Lastly, ftp url is then passed to Aspera transfer command `ascp`
+to download the fastq.gz file.
+The file reports will be stored as a `.tsv` table as records of the downloading process. 
+All files' MD5 hash values are saved in `.md5` file which users can further verify the integrity of files.
+
+![workflow](AsperaSRAgetter/static/workflow.svg) 
 
 ## Usage
 
