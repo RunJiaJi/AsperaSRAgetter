@@ -20,7 +20,9 @@ conda install -c hcc aspera-cli
 
 AsperaSRAgetter first inquiry for corresponding fastq.gz file report through [ENA filereport API](https://www.ebi.ac.uk/ena/portal/api/). Sencondly, the MD5 hash value and ftp url of each fastq.gz files are then resolved from the report. Lastly, ftp url is then passed to Aspera transfer command `ascp`
 to download the fastq.gz file.
+
 The file reports will be stored as a `.tsv` table as records of the downloading process. 
+
 All files' MD5 hash values are saved in `.md5` file which users can further verify the integrity of files.
 
 ![workflow](AsperaSRAgetter/static/workflow.png) 
@@ -52,3 +54,6 @@ Download with one accession:
 Download with TXT file containing multiple accessions:
     $ sragetter --file sra_accessions.txt --ssh-key sshkey_path.openssh --outdir outdir_path
 ```
+
+## Contact
+If you have any questions using AsperaSRAgetter, feel free to open an issue or contact me jirunjia@gmail.com.
