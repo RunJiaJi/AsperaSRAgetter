@@ -23,7 +23,7 @@ to download the fastq.gz file.
 The file reports will be stored as a `.tsv` table as records of the downloading process. 
 All files' MD5 hash values are saved in `.md5` file which users can further verify the integrity of files.
 
-![workflow](AsperaSRAgetter/static/workflow.svg) 
+![workflow](AsperaSRAgetter/static/workflow.png) 
 
 ## Usage
 
