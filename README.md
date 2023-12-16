@@ -7,7 +7,7 @@ AsperaSRAgetter provides an easy way to download sequencing data (fastq.gz forma
 AsperaSRAgetter has been distributed on [pypi](https://pypi.org/project/AsperaSRAgetter/). You can easily install AsperaSRAgetter through pip. AsperaSRAgetter depends on Aspera-CLI to retrive sequencing data from ENA. It is recommended to install Aspera-CLI [with Conda](https://anaconda.org/hcc/aspera-cli).
 
 ```shell
-# You may create a new invironment for AsperaSRAgetter, but this is optional
+# You may create a new environment for AsperaSRAgetter, but this is optional
 conda create -n AsperaSRAgetter python=3.10
 conda activate AsperaSRAgetter
 
