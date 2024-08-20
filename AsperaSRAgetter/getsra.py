@@ -77,8 +77,8 @@ def dl(acc, sshkey, outdir):
         logging.info(f'Command is: {cmd}')
         logging.info('Downloading has started...')
         return_code = os.system(cmd)
+        filename = _url.split('/')[-1]
         if return_code == 0:
-            filename = _url.split('/')[-1]
             logging.info(f"Writing {filename} md5 hash value to fastq.md5 file")
             md5_file.write(f'{md5}\t{filename}\n')
         else:
